@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+	<title>Zomfront</title>
+	</head>
+		<body>
+		<h1 class="heading"></h1>
+			<input type="text" placeholder="Enter text">
+			<button type="button">Play</button>
+
+		<script src="jquery-2.2.0.js"></script>
+			<script>
+			$('button').on('click',function(){
+				var name=$('input').val();
+				var message="WELCOME"+name;
+				console.log(message);
+				$('.heading').text('A heading');
+			});
+			</script>
+		</body>
+	</html>
+
+

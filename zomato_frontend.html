@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>ZOMATO_FRONTEND</title>
+		<link rel="stylesheet" href="zomato_frontend.css">
+		</head>
+		<body>
+		<h1><mark>Zomato Ordering<mark></h1>
+
+
+
+		<div class="box">
+			<img src="Domino_pizza_logo.svg.png" alt="image1" id="img1">
+			<img src="McDonald's_Golden_Arches.svg.png"alt="image2" id="img2">
+			<img src="KFC_logo.svg.png"alt="image3"id="img3">
+			<img src="Screenshot_2017-07-05-12-43-11-722_edited.jpg" alt="img4" width="35%" id="img4">
+		</div>
+		<!--hidden class-->
+		<div class="hidden">
+		</div>
+
+		<!--menu for dominos-->
+		<div class="hidden dominosmenu">
+		<h2><u>Dominos</u></h2>
+		<ul>
+		<li>Peppy Paneer</li>
+		<input type="checkbox">
+		<li>Farm House</li>
+		<input type="checkbox">
+		<li>Mexican Green Wave</li>
+		<input type="checkbox">
+		<li>Country Special<li>
+		<input type="checkbox">
+		<li>Capsicum and Paneer</li>
+		<input type="checkbox">
+		</ul>
+		<button type="button">CheckOut</button>	
+		</div>
+
+
+		<!--menu for mcdonalds-->
+		<div class=" hidden menudonalds">
+		<h2><u>Mc donalds</u></h2>
+		<ul>
+			<li>Mcveggie</li>
+			<input type="checkbox">
+			<li>McEgg</li>
+			<input type="checkbox">
+			<li>McChicken Grill</li>
+			<input type="checkbox">
+			<li>McAloo Tikki</li>
+			<input type="checkbox">
+		</ul>
+		<button type="button">CheckOut</button>
+		</div>
+
+
+<!--menu for KFC-->
+		<div class="hidden kfcmenu ">
+		<h2><u>KFC</u></h2>
+		<ul>
+		<li>Chicken Zinger</li>
+		<input type="checkbox">
+		<li>Chicken Popcorn</li>
+		<input type="checkbox">
+		<li>Paneer Zinger</li>
+		<input type="checkbox">
+		<li>Chicken Wings</li>
+		<input type="checkbox">
+		</ul>
+		<button type="button">CheckOut</button>
+		</div>
+
+		<!--menu for DD-->
+		<div class="hidden ddmenu">
+		<h2><u>DunkinDonuts</u></h2>
+		<ul>
+		<li>Hot Chocolate</li>
+		<input type="checkbox">
+		<li>Rainbow Donuts</li>
+		<input type="checkbox">
+		<li>Glazed Donuts</li>
+		<input type="checkbox">
+		<li>Spicy Donuts</li>
+		<input type="checkbox">
+		</ul>
+		<button type="button">CheckOut</button>
+		</div>
+
+		<script src="jquery-2.2.0.js"></script>
+		<script>
+			$('#img1').on('click',function(){
+				$('.dominosmenu').toggleClass("hidden");
+				$('.ddmenu').addClass("hidden");
+				$('.kfcmenu').addClass("hidden");
+				$('.menudonalds').addClass("hidden");
+			});
+		</script>
+		<script>
+			$('#img2').on('click',function(){
+				$('.dominosmenu').addClass("hidden");
+				$('.menudonalds').toggleClass("hidden");
+				$('.ddmenu').addClass("hidden");
+				$('.kfcmenu').addClass("hidden");
+
+				});
+		</script>
+		<script>
+			$('#img3').on('click',function(){
+				
+				$('.dominosmenu').addClass("hidden");
+				$('.menudonalds').addClass("hidden");
+				$('.kfcmenu').toggleClass("hidden");
+				$('.ddmenu').addClass("hidden");
+				
+			});
+		</script>
+		<script>
+			$('#img4').on('click',function(){
+				$('.kfcmenu').addClass("hidden");
+				$('.dominosmenu').addClass("hidden");
+				$('.menudonalds').addClass("hidden");
+				$('.ddmenu').toggleClass("hidden");
+			});
+		</script>
+<!-- // <script>
+// 	$('checkbox').on('click',function(){
+// 		var count=document.$('checkbox').length;
+// 		if Number(count)<0
+// 		alert("No box selected");
+// 			}); -->
